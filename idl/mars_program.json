@@ -1,0 +1,540 @@
+{
+  "version": "0.9.2",
+  "name": "mars_program",
+  "instructions": [
+    {
+      "name": "Reset",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Signer"
+        },
+        {
+          "name": "bus0",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 0"
+        },
+        {
+          "name": "bus1",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 1"
+        },
+        {
+          "name": "bus2",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 2"
+        },
+        {
+          "name": "bus3",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 3"
+        },
+        {
+          "name": "bus4",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 4"
+        },
+        {
+          "name": "bus5",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 5"
+        },
+        {
+          "name": "bus6",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 6"
+        },
+        {
+          "name": "bus7",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 7"
+        },
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars token mint account"
+        },
+        {
+          "name": "treasury",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars treasury account"
+        },
+        {
+          "name": "treasuryTokens",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars treasury token account"
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "SPL token program"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 0
+      }
+    },
+    {
+      "name": "Register",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Signer"
+        },
+        {
+          "name": "proof",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars proof account"
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Solana system program"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 1
+      }
+    },
+    {
+      "name": "Mine",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Signer"
+        },
+        {
+          "name": "bus",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account"
+        },
+        {
+          "name": "proof",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars proof account"
+        },
+        {
+          "name": "treasury",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars treasury account"
+        },
+        {
+          "name": "slotHashes",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Solana slot hashes sysvar"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 2
+      }
+    },
+    {
+      "name": "Claim",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Signer"
+        },
+        {
+          "name": "beneficiary",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Beneficiary token account"
+        },
+        {
+          "name": "proof",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars proof account"
+        },
+        {
+          "name": "treasury",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars treasury account"
+        },
+        {
+          "name": "treasuryTokens",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars treasury token account"
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "SPL token program"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 3
+      }
+    },
+    {
+      "name": "Initialize",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Admin signer"
+        },
+        {
+          "name": "bus0",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 0"
+        },
+        {
+          "name": "bus1",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 1"
+        },
+        {
+          "name": "bus2",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 2"
+        },
+        {
+          "name": "bus3",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 3"
+        },
+        {
+          "name": "bus4",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 4"
+        },
+        {
+          "name": "bus5",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 5"
+        },
+        {
+          "name": "bus6",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 6"
+        },
+        {
+          "name": "bus7",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars bus account 7"
+        },
+        {
+          "name": "metadata",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars mint metadata account"
+        },
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars mint account"
+        },
+        {
+          "name": "treasury",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars treasury account"
+        },
+        {
+          "name": "treasuryTokens",
+          "isMut": true,
+          "isSigner": false,
+          "desc": "Mars treasury token account"
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Solana system program"
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "SPL token program"
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "SPL associated token program"
+        },
+        {
+          "name": "mplMetadataProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Metaplex metadata program"
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Solana rent sysvar"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 100
+      }
+    },
+    {
+      "name": "UpdateAdmin",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Admin signer"
+        },
+        {
+          "name": "treasury",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars treasury account"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 101
+      }
+    },
+    {
+      "name": "UpdateDifficulty",
+      "accounts": [
+        {
+          "name": "marsProgram",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars program"
+        },
+        {
+          "name": "signer",
+          "isMut": false,
+          "isSigner": true,
+          "desc": "Admin signer"
+        },
+        {
+          "name": "treasury",
+          "isMut": false,
+          "isSigner": false,
+          "desc": "Mars treasury account"
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 102
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Bus",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "rewards",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Proof",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "claimableRewards",
+            "type": "u64"
+          },
+          {
+            "name": "hash",
+            "type": {
+              "defined": "Hash"
+            }
+          },
+          {
+            "name": "totalHashes",
+            "type": "u64"
+          },
+          {
+            "name": "totalRewards",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Treasury",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "publicKey"
+          },
+          {
+            "name": "bump",
+            "type": "u64"
+          },
+          {
+            "name": "difficulty",
+            "type": {
+              "defined": "Hash"
+            }
+          },
+          {
+            "name": "lastResetAt",
+            "type": "i64"
+          },
+          {
+            "name": "rewardRate",
+            "type": "u64"
+          },
+          {
+            "name": "totalClaimedRewards",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 0,
+      "name": "NotStarted",
+      "msg": "The starting time has not passed yet"
+    },
+    {
+      "code": 1,
+      "name": "NeedsReset",
+      "msg": "The epoch has ended and needs reset"
+    },
+    {
+      "code": 2,
+      "name": "ResetTooEarly",
+      "msg": "The epoch is active and cannot be reset at this time"
+    },
+    {
+      "code": 3,
+      "name": "HashInvalid",
+      "msg": "The provided hash was invalid"
+    },
+    {
+      "code": 4,
+      "name": "DifficultyNotSatisfied",
+      "msg": "The provided hash does not satisfy the difficulty requirement"
+    },
+    {
+      "code": 5,
+      "name": "BusRewardsInsufficient",
+      "msg": "The bus does not have enough rewards to issue at this time"
+    },
+    {
+      "code": 6,
+      "name": "ClaimTooLarge",
+      "msg": "The claim amount cannot be greater than the claimable rewards"
+    },
+    {
+      "code": 7,
+      "name": "HasEnded",
+      "msg": "The mining has ended"
+    }
+  ],
+  "metadata": {
+    "origin": "shank",
+    "address": "MarseeGuML6KGiMcZuvCFePtaoz66ch84eWtSzvPaug"
+  }
+}
